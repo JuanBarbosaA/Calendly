@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('public/fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  font-family: 'Gilroy', sans-serif;
+}

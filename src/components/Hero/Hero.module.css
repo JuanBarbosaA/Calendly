@@ -1,0 +1,283 @@
+.hero {
+  position: relative;
+  overflow: auto;
+  padding: 72px 0;
+}
+
+.heroContent {
+  display: flex;
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.backgroundSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  overflow: visible;
+}
+
+.animatedPath1, .animatedPath2 {
+  will-change: transform;
+  mix-blend-mode: multiply;
+}
+.animatedPath1 {
+  fill: rgb(0, 153, 255);
+  transform-origin: 72% 38%;
+  transform: translate(-11.1%, -25%) rotate(37deg) scale(1.1);
+  animation: floatAnimation1 32.5s ease-in-out infinite;
+}
+
+.animatedPath2 {
+  fill: rgb(229, 92, 255);
+  transform-origin: 60% 15%;
+  transform: scale(1.1);
+  animation: floatAnimation2 30.5s ease-in-out infinite;
+}
+
+@keyframes floatAnimation1 {
+  0% {
+    transform: translate(-11.1%, -25%) rotate(37deg) scale(1.1);
+  }
+  25% {
+    transform: translate(5%, -10%) rotate(100deg) scale(1.12);
+  }
+  50% {
+    transform: translate(12%, -5%) rotate(180deg) scale(1.15);
+  }
+  75% {
+    transform: translate(5%, -10%) rotate(270deg) scale(1.12);
+  }
+  100% {
+    transform: translate(-11.1%, -25%) rotate(397deg) scale(1.1);
+  }
+}
+
+@keyframes floatAnimation2 {
+  0%, 100% {
+    transform: translate(13.662%, 20.581%) rotate(110deg) scale(1.1);
+  }
+  25% {
+    transform: translate(13.662%, 14.5%) rotate(85deg) scale(1.12);
+  }
+  50% {
+    transform: translate(13.662%, 10%) rotate(-34deg) scale(1.15);
+  }
+  75% {
+    transform: translate(13.662%, 15.3%) rotate(45deg) scale(1.12);
+  }
+}
+
+.title {
+  color: #0b3558;
+  font-size: 4.25rem;
+  line-height: 1.2;
+  font-weight: bolder;
+  padding-bottom: 24px;
+}
+
+.paragraph {
+  color: #476788;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 400;
+  padding-bottom: 24px;
+  font-weight: 400;
+}
+
+.heroButtons {
+  padding-top: 16px;
+  width: 307px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buttonGoogle {
+  width: 100%;
+  background-color: #006bff;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  border: none;
+  padding: 6px 16px 6px 7px;
+  gap: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttonGoogle span {
+  width: 100%;
+}
+
+.buttonMicrosoft {
+  width: 100%;
+  background-color: #0b3558;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  border: none;
+  padding: 6px 16px 6px 7px;
+  gap: 16px;
+  font-weight: 500;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttonMicrosoft span {
+  width: 100%;
+}
+
+.division {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.division hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.division span {
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+}
+
+.emailSignupBox {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.emailSignupBox a {
+  color: #006bff;
+}
+
+.heroGraphic {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.heroText{
+  max-width: 468px;
+}
+
+.slide {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: fit-content;
+  transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid rgba(228, 228, 228, 0.671);
+  border-radius: 24px;
+  box-shadow: 
+    rgba(71, 103, 136, 0.04) 0px 4px 5px 0px,
+    rgba(71, 103, 136, 0.03) 0px 8px 15px 0px,
+    rgba(71, 103, 136, 0.08) 0px 30px 50px 0px;
+  background: white;
+  transform: translateY(0px) scale(0.9);
+  opacity: 0.75;
+  overflow: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  max-width: 740px;
+}
+
+.slide.active {
+  position: relative;
+  opacity: 1;
+  z-index: 10;
+  transform: translateY(40px) translateZ(1px);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: white;
+}
+
+.slide.active {
+  opacity: 1 !important;
+}
+
+.heroGraphic article img {
+  width: 100%;
+  border-radius: 0 0 24px 24px;
+}
+
+.heroGraphic article .containerTitle {
+  padding: 24px 36px;
+}
+
+.heroGraphic article h4 {
+  color: #0b3558;
+  line-height: 1.4;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.emailSignupBox {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #0b3558;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .heroContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroText,
+  .heroGraphic {
+    max-width: 100%;
+  }
+  
+  .heroGraphic {
+    height: 420px;
+  }
+  
+  .backgroundSvg {
+    top: 50px;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroGraphic {
+    height: 380px;
+  }
+  
+  .backgroundSvg {
+    top: 100px;
+    transform: scale(0.6);
+  }
+}
