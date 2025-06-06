@@ -123,5 +123,33 @@ header {
   z-index: 1001;
   border-top: 1px solid #e7edf6;
   border-radius: 0 0 8px 8px;
-  max-width: 1200px;
+}
+
+
+.animationLine {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  bottom: -27px;
+  width: 0;
+  height: 4px;
+  background-color: #006bff;
+  transition: width 0.3s ease-in-out;
+}
+
+.headerBottom ul li:hover .animationLine {
+  width: 100%;
+}
+
+.headerBottom ul li.active .animationLine {
+  width: 100%;
+}
+
+
+.headerBottom ul li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  position: relative;
 }

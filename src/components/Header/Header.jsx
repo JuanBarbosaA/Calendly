@@ -70,33 +70,53 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
               <img src="https://marketing-assets.calendly.com/media/logo.svg" width="166" alt="Logo" />
             </a>
             <ul>
-              <li 
-                onClick={() => toggleMenu("product")}
-                className={isMenuOpen === "product" ? styles.active : ""}
-              >
+              
+ <li
+  onMouseEnter={() => setIsMenuOpen("product")}   // hover abre el menú
+  onClick={() => toggleMenu("product")}           // click toggle (abre/cierra)
+  className={isMenuOpen === "product" ? styles.active : ""}
+>
+
+
                 <span>Product</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" d="m1.5 1 6 6 6-6" />
                 </svg>
+                <span className={styles.animationLine}></span>
               </li>
-              <li 
-                onClick={() => toggleMenu("solutions")}
-                className={isMenuOpen === "solutions" ? styles.active : ""}
-              >
+              
+
+<li
+  onMouseEnter={() => setIsMenuOpen("solutions")}   // hover abre el menú
+  onClick={() => toggleMenu("solutions")}           // click toggle (abre/cierra)
+  className={isMenuOpen === "solutions" ? styles.active : ""}
+>
+
+                
                 <span>Solutions</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" d="m1.5 1 6 6 6-6" />
                 </svg>
+                <span className={styles.animationLine}></span>
               </li>
               <li><span>Enterprise</span></li>
-              <li 
-                onClick={() => toggleMenu("resources")}
-                className={isMenuOpen === "resources" ? styles.active : ""}
-              >
+              <li
+  onMouseEnter={() => setIsMenuOpen("resources")}   // hover abre el menú
+  onClick={() => toggleMenu("resources")}           // click toggle (abre/cierra)
+  className={isMenuOpen === "resources" ? styles.active : ""}
+>
+
+
+                               <li 
+  onMouseEnter={() => toggleMenu("solutions")}
+  onClick={() => setIsMenuOpen(null)} // cierre con click
+  className={isMenuOpen === "solutions" ? styles.active : ""}
+></li>
                 <span>Resources</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" d="m1.5 1 6 6 6-6" />
                 </svg>
+                <span className={styles.animationLine}></span>
               </li>
               <li><span>Pricing</span></li>
             </ul>

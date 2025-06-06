@@ -1,0 +1,233 @@
+
+.menuContent {
+  display: flex;
+}
+
+
+.containerTitles{
+    display: flex;
+    width: 100%;
+    gap: 78px;
+}
+
+.containerTitle{
+    width: 100%;
+}
+
+.menuSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+}
+
+.menuSection:first-child {
+    width: 616px;
+  padding: 32px 56px 48px 48px;
+  background-color: white;
+  border-radius: 0 0 0 8px;
+}
+
+.menuSection:last-child {
+    width: auto;
+  padding: 32px 56px 48px;
+  background-color: #f3f4f6;
+  gap: 24px;
+  border-radius: 0 0 8px 0;
+}
+
+.menuTitle {
+  color: #476788;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menuItem {
+  display: flex;
+  gap: 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  color: #0b3558;
+  align-items: center;
+}
+
+.menuItem:hover {
+  background-color: #f8f9fb;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  border-radius: 8px;
+  background-color: #f0f5ff;
+}
+
+.bigIconWrapper{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  min-height: 56px;
+  border-radius: 8px;
+  background-color: #f0f5ff;
+}
+
+
+
+
+
+
+.menuColumns:last-child .iconWrapper {
+  height: 20px;
+  width: 20px;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  justify-content: center;
+  gap: 5px;
+}
+
+.itemContent span {
+  color: #0b3558;
+  font-weight: 600;
+  font-size: 18px;
+  white-space-collapse: collapse;
+  text-wrap-mode: wrap;
+}
+
+.itemContent small {
+  font-weight: 600;
+  font-size: 14px;
+  color: #476788;
+  line-height: 1.4;
+}
+
+.menuColumns {
+  display: flex;
+  gap: 32px;
+  height: 100%;
+}
+
+.menuColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.subMenuDivision{
+   width: 1px;
+    background-color: #d4e0ed;
+}
+
+.submenuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  color: #0b3558;
+  font-weight: 600;
+  width: max-content;
+}
+
+.submenuItem:hover {
+  background-color: #f8f9fb;
+}
+
+.submenuItem span {
+  font-size: 16px;
+}
+
+.doubleColumn {
+  display: flex;
+  height: 100%;
+  gap: 48px;
+}
+
+.doubleColumn > div {
+  flex: 1;
+}
+
+.submenuItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.featuredCard {
+  border-radius: 12px;
+}
+
+.featuredCard a {
+  display: flex;
+  text-decoration: none;
+  color: #0b3558;
+}
+
+.cardImage {
+  width: 40%;
+  object-fit: cover;
+}
+
+.cardContent {
+}
+
+.cardContent h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.cardContent p {
+  font-size: 14px;
+  color: #476788;
+  line-height: 1.4;
+}
+
+.active {
+  color: #006bff;
+}
+
+
+.featuredCard{
+   
+}
+
+.featuredCard a{
+   gap: 16px;
+}
+
+.featuredCard img{
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    max-height: 100%;
+    max-width: 160px;
+    min-width: 160px;
+}
