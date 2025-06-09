@@ -53,6 +53,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
                 <path strokeWidth="0.833" d="M8.147.92c5.347 3.08 5.335 10.808 0 13.91M8.017 1.018c-5.347 3.08-5.335 10.808 0 13.91M15.135 7.908H.964" />
                 <path strokeWidth="0.833" d="m2.792 3.14.071.065a7.55 7.55 0 0 0 10.247-.064M2.89 12.74l.071-.065a7.55 7.55 0 0 1 10.247.065M8.017.92v14.106" />
               </svg>
+              
               <span>English</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" d="m1.5 1 6 6 6-6" />

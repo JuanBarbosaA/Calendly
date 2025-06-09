@@ -1,4 +1,6 @@
+import BrandCarousel from "../BrandCarousel/BrandCarousel";
 import Hero from "../Hero/Hero";
+import HowItWorks from "../HowItWorks/HowItWorks";
 import styles from "./MainSection.module.css"
 
 export default function MainSection({ isMenuOpen, setIsMenuOpen }) {
@@ -12,23 +14,8 @@ export default function MainSection({ isMenuOpen, setIsMenuOpen }) {
       )}
       <div className={styles.container}>
         <Hero />
-        <div>
-          <h2>
-            Trusted by more than <span>100,000</span> of the world's leading
-            organizations
-          </h2>
-        </div>
-        <section>
-          <div>
-            <h2>Calendly makes scheduling simple</h2>
-            <p>
-              Calendly’s easy enough for individual users, and powerful enough
-              to meet the needs of enterprise organizations — including 86% of
-              the Fortune 500 companies.
-            </p>
-            <button>Sign up for free</button>
-          </div>
-        </section>
+        <BrandCarousel/>
+        <HowItWorks/>
       </div>
     </main>
   );
