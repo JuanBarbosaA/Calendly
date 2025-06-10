@@ -1,4 +1,5 @@
 import BrandCarousel from "../BrandCarousel/BrandCarousel";
+import CalendlyIntegrations from "../CalendlyIntegrations/CalendlyIntegrations";
 import Hero from "../Hero/Hero";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import styles from "./MainSection.module.css"
@@ -16,6 +17,7 @@ export default function MainSection({ isMenuOpen, setIsMenuOpen }) {
         <Hero />
         <BrandCarousel/>
         <HowItWorks/>
+        <CalendlyIntegrations/>
       </div>
     </main>
   );
