@@ -1,0 +1,187 @@
+footer{
+        position: relative;
+    background-color: transparent;
+    background-position: center center;
+    background-size: cover;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    padding-top: 96px;
+    padding-bottom: 96px;
+    width: 100%;
+}
+
+.container{
+        display: flex
+;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container .containerTop{
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+    padding-bottom: 64px;
+}
+
+.containerTop .containerTopTitle{
+        display: flex
+;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+.containerTop .containerTopTitle .title{
+        color: rgb(11, 53, 88);
+    font-size: 3.125rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.containerTop .containerTopTitle .title .titleDecoration{
+    color: rgb(0, 107, 255);
+}
+
+.containerTop .containerTopTitle .title .decoration{
+        vertical-align: top;
+        font-weight: 400;
+}
+
+.containerTop .containerTopTitle .description{
+        text-align: left;
+    color: rgb(71, 103, 136);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.containerTop .containerTopCard{
+    display: flex;
+    width: 100%;
+    max-width: 670px;
+}
+
+.containerTopCard .iconCard{
+        height: 100%;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 24px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(212, 224, 237);
+    box-shadow: rgba(71, 103, 136, 0.04) 0px 4px 5px 0px, rgba(71, 103, 136, 0.03) 0px 8px 15px 0px, rgba(71, 103, 136, 0.06);
+        display: flex
+;
+    width: 100%;
+    background-position: right center;
+    background-size: cover;
+text-decoration: none;
+    
+}
+
+.containerTopCard .iconCard .iconCardContent{
+        display: flex
+;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+}
+
+.iconCard .iconCardContent .headerCard{
+        display: flex
+;
+    width: 100%;
+}
+
+.headerCard .badgeWrapper{
+        display: flex
+;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.headerCard .badgeWrapper .badge{
+        display: flex
+;
+    width: fit-content;
+    height: fit-content;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 4px;
+    background-color: rgb(230, 240, 255);
+    border-radius: 50px;
+    font-weight: 500;
+    padding: 4px 12px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    color: rgb(0, 78, 186);
+    transition: 0.2s;
+}
+
+.headerCard button{
+        cursor: pointer;
+    width: 100%;
+    max-width: 32px;
+    height: 32px;
+    position: relative;
+    border-radius: 4px;
+    color: rgb(11, 53, 88);
+    background-color: transparent;
+    
+
+        border: none;
+    margin: 0px;
+    padding: 0px;
+    
+    overflow: visible;
+    background: transparent;
+    outline: none;
+    appearance: none;
+}
+
+.headerCard button div{
+    overflow: hidden;
+}
+
+
+.headerCard button div svg{
+        transform: translate(0px);
+    transition: transform 0.175s ease-in-out;
+}
+
+.iconCard .iconCardContent .cardTitle{
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 600;
+    text-align: left;
+    color: rgb(11, 53, 88);
+}
+
+.iconCard .iconCardContent .cardBody{
+    display: flex
+;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: rgb(71, 103, 136);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 400;
+}

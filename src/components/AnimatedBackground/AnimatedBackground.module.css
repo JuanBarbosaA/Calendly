@@ -1,0 +1,220 @@
+.sectionContainer{
+        position: relative;
+    background-color: rgb(240, 243, 248);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+  
+    padding: 0px 40px;
+}
+
+.sectionContainer svg{
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    line-height: 2;
+}
+
+.sectionContainer svg path:nth-child(1){
+        will-change: transform;
+    mix-blend-mode: multiply;
+        fill: rgb(0, 153, 255);
+    transform-origin: 5% 67.5%;
+    animation: 16s ease-in-out 0s infinite normal none running ifdDXC;
+}
+
+
+.sectionContainer svg path:nth-child(2){
+    will-change: transform;
+    mix-blend-mode: multiply;
+        fill: rgb(0, 153, 255);
+    transform-origin: 97.5% 37%;
+    animation: 16s ease-in-out 0s infinite normal none running eeIoFf;
+        line-height: 2;
+}
+
+
+.sectionContainer svg path:nth-child(3){
+        will-change: transform;
+    mix-blend-mode: multiply;
+        fill: rgb(229, 92, 255);
+    transform-origin: 3.5% 35%;
+    animation: 16s ease-in-out 0s infinite normal none running lfCRkm;
+        line-height: 2;
+}
+
+
+.sectionContainer svg path:nth-child(4){
+    will-change: transform;
+    mix-blend-mode: multiply;
+    fill: rgb(130, 71, 245);
+    transform-origin: 93% 68%;
+    animation: 16s ease-in-out 0s infinite normal none running hCJRdx;
+}
+
+@keyframes ifdDXC{
+0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+50% {
+    transform: translate(0%, -35.5%) rotate(-90deg) scale(0.9);
+}
+100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+}
+
+
+@keyframes eeIoFf{
+0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+50% {
+    transform: translate(-1%, 30.5%) rotate(122deg) scale(0.9);
+}
+100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+}
+
+@keyframes lfCRkm{
+    0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+50% {
+    transform: translate(-0.9%, 34.9%) rotate(64deg) scale(1.22);
+}
+100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+}
+
+@keyframes hCJRdx {
+    0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+50% {
+    transform: translate(-1%, -31.9%) rotate(73deg) scale(1.15);
+}
+100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+}
+
+.wrapper{
+    display: flex
+;
+    flex-direction: column;
+    gap: 40px;
+        padding-top: 96px;
+    padding-bottom: 96px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contentContainer{
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    min-height: 220px;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+.contentContainer .content{
+        display: flex
+;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 996px;
+}
+
+.contentContainer .content .title{
+        opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.4s, transform 0.4s;
+    font-size: 4.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(11, 53, 88);
+}
+
+.contentContainer .content .containerInfo{
+
+        width: 100%;
+    height: auto;
+    text-align: center;
+    color: rgb(71, 103, 136);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.contentContainer .content .containerInfo p{
+        width: 100%;
+    height: auto;
+    padding-bottom: 32px;
+}
+
+.content .containerInfo .containerButtons{
+        -webkit-box-pack: center;
+    justify-content: center;
+        flex-flow: wrap;
+        display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.containerInfo .containerButtons a{
+    
+    cursor: pointer;
+    transition: 0.2s linear, background-position 1ms, background-size 1ms;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 107, 255);
+    background-color: rgb(0, 107, 255);
+    padding: 10px 18px;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    position: relative;
+    height: fit-content;
+    flex-direction: row;
+    display: inline-flex
+;
+    opacity: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: gilroy, "gilroy Fallback";
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.containerInfo .containerButtons a:last-child{
+
+color: rgb(71, 103, 136);
+    border: 1px solid rgb(71, 103, 136);
+    background-color: transparent;
+}

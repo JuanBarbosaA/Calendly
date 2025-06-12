@@ -1,0 +1,466 @@
+.container {
+  position: relative;
+  background-color: rgb(248, 249, 251);
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 0px 40px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 792px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.8s 0.4s, transform 0.6s 0.4s;
+}
+
+.containerHeaderTitle {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.8s 0.4s, transform 0.6s 0.4s;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 792px;
+}
+
+.containerHeaderTitle .headerTitle {
+  font-size: 3.125rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: left;
+  color: rgb(11, 53, 88);
+}
+
+.header .containerInfo {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.8s 0.5s, transform 0.6s 0.5s;
+  width: 100%;
+  max-width: 690px;
+  height: 100%;
+  color: rgb(71, 103, 136);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.containerInfo .containerCustomerStories {
+  display: flex;
+  width: 100%;
+  flex-flow: wrap;
+}
+
+.containerInfo .containerCustomerStories a {
+  cursor: pointer;
+  transition: 0.2s linear, background-position 1ms, background-size 1ms;
+  color: rgb(11, 53, 88);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  position: relative;
+  height: fit-content;
+  flex-direction: row;
+  padding: 0px;
+  display: inline-flex;
+  opacity: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 4px;
+  text-align: left;
+  font-family: gilroy, "gilroy Fallback";
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.containerInfo .containerCustomerStories a .icon {
+  transition: transform 0.1s linear;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 28px;
+  height: 20px;
+}
+
+.containerCustomerStories a .icon svg {
+  stroke-width: 1.5px;
+  line-height: 2;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+.banner .bannerContent {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 56px;
+  width: 100%;
+}
+
+.banner .bannerContent .container {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.4s, transform 0.4s;
+  margin-bottom: -80px;
+}
+
+.bannerContent .container .containerPagination {
+  display: flex;
+  position: absolute;
+  right: 80px;
+  top: -92px;
+}
+
+
+/*comentario ini*/
+.containerPagination .pagination button:hover:not(:disabled) {
+  background-color: #0b3558;
+  color: white;
+  transform: scale(1.05);
+}
+
+.containerPagination .pagination button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.containerPagination .pagination button:not(:disabled) {
+  cursor: pointer;
+}
+/*fin*/
+
+
+
+.container .containerPagination .pagination {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 12px;
+  width: auto;
+}
+
+.containerPagination .pagination button {
+  cursor: not-allowed;
+  background-color: rgb(248, 249, 251);
+  color: rgb(11, 53, 88);
+  display: flex;
+  width: 100%;
+  max-width: 36px;
+  min-width: 36px;
+  height: 36px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+}
+
+.containerPagination .pagination button svg {
+  transition: 0.2s ease-in-out;
+
+  width: 20px;
+  height: 20px;
+}
+
+.containerPagination .pagination button:first-child {
+  transform: rotate(180deg);
+}
+
+.containerPagination .pagination button:first-child:hover {
+  transform: rotate(180deg);
+}
+
+.container .bannerItemsCarrouselCards {
+  width: 100vw;
+  margin: 0px calc(50% - 50vw);
+  padding-left: calc(-50% + 50vw);
+  overflow: hidden;
+  touch-action: pan-y;
+  padding-bottom: 80px;
+  height: 100%;
+}
+
+.container .bannerItemsCarrouselCards .carrouselCards {
+  display: flex;
+  width: 2018px;
+  gap: 32px;
+  flex-direction: row;
+  transition: 600ms;
+  transform: translate3d(var(--offsetX), 0, 0);
+}
+
+.bannerItemsCarrouselCards .carrouselCards .card {
+  display: flex;
+  max-width: 378px;
+  width: 378px;
+  user-select: none;
+  transition: 600ms;
+  flex: 1 1 0%;
+}
+
+.carrouselCards .card a {
+  height: 100%;
+  flex-direction: column;
+  border: 1px solid rgb(11, 53, 88);
+  padding: 32px 40px 24px;
+  gap: 48px;
+  border-radius: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  box-shadow: rgba(71, 103, 136, 0.04) 0px 4px 5px 0px,
+    rgba(71, 103, 136, 0.03) 0px 8px 15px 0px, rgba(71, 103, 136, 0.08);
+  text-decoration: none;
+}
+
+.carrouselCards .card:nth-child(2) a{
+  border: 1px solid #0f62fe;
+}
+
+.carrouselCards .card:nth-child(3) a{
+  border: 1px solid #ffa600;
+}
+
+.carrouselCards .card:nth-child(4) a{
+  border: 1px solid #bb32d5;
+}
+
+.carrouselCards .card:nth-child(5) a{
+  border: 1px solid #8247f5;
+}
+
+
+.card:hover .cardIconAnimation svg{
+    scale: 430%;
+    transition-duration: 400ms;
+}
+
+
+.card:hover .cardContent p {
+    color: white;
+}
+.card:hover .cardContent span {
+    color: white;
+}
+
+
+.card a .cardName {
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cardName .containerImages {
+  width: 100%;
+  display: flex;
+}
+
+.cardName .containerImages .contentImages {
+  height: 40px;
+  width: 100%;
+}
+
+.cardName .containerImages .contentImages {
+    
+}
+
+.cardName .containerImages .contentImages img {
+  height: 100%;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(21%) saturate(2231%) hue-rotate(177deg) brightness(96%) contrast(95%);
+  transition: filter 0.3s ease;
+}
+
+.card:hover .cardName .containerImages .contentImages img {
+  height: 100%;
+  filter: brightness(0) invert(1);
+}
+
+
+
+
+.card a .cardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+.card a .cardContent .percent {
+  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgb(11, 53, 88);
+  font-size: 4.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.card a .cardContent .percent span {
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.card a .cardContent .containerInfo {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 96px;
+  width: 100%;
+}
+
+.card a .cardContent .containerInfo .containerInfoText {
+  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgb(11, 53, 88);
+  width: 100%;
+  height: auto;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.card a .cardContent .containerInfo .containerInfoText p {
+  width: 100%;
+}
+
+.card a .cardContent .containerInfo button {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s linear, background-position 1ms, background-size 1ms;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  position: relative;
+  height: fit-content;
+  flex-direction: row;
+  padding: 0px;
+  display: inline-flex;
+  opacity: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: none;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  outline: none;
+  appearance: none;
+}
+
+.card a .cardContent .containerInfo button .icon {
+  transition: transform 0.1s linear;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 28px;
+  height: 20px;
+}
+
+.card a .cardContent .containerInfo button .icon svg {
+  stroke-width: 1.5px;
+}
+
+.card a .cardIconAnimation {
+  transform: rotate(80deg);
+  width: 374px;
+  height: 374px;
+  max-width: 374px;
+  position: absolute;
+  bottom: -284px;
+  left: -110px;
+  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+  display: block;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.card:nth-child(2) a .cardIconAnimation{
+    bottom: -264px;
+    left: -85px;
+}
+
+.card:nth-child(3) a .cardIconAnimation{
+    bottom: -264px;
+    left: -85px;
+}
+
+.card:nth-child(4) a .cardIconAnimation{
+    bottom: -254px;
+    left: -60px;
+}
+
+.card:nth-child(5) a .cardIconAnimation{
+    bottom: -274px;
+    left: -80px;
+}
+
+
+
+.card a .cardIconAnimation svg {
+  width: 100%;
+  height: 100%;
+  transition-duration: 400ms;
+}
+
+
+
+
+.containerPagination .pagination button {
+  background-color: rgb(248, 249, 251);
+  color: rgb(11, 53, 88);
+  display: flex;
+  width: 100%;
+  max-width: 36px;
+  min-width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(11, 53, 88, 0.1);
+}
+
+
+
