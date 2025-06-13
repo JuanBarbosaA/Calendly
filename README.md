@@ -42,7 +42,13 @@ Calendary was created with the intention to:
 
 ### 💻 Home Page
 
-![Calendary Home Screenshot](./public/home.png) 
+![Calendary Home Screenshot](./home.png) 
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
@@ -55,8 +61,3 @@ git clone https://github.com/JuanBarbosaA/Calendary.git
 cd Calendary
 npm install
 npm run dev
-
-
-## 📄 License
-
-This project is licensed under the [MIT License](./LICENSE).
