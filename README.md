@@ -42,7 +42,7 @@ Calendary was created with the intention to:
 
 ### 💻 Home Page
 
-![Calendary Home Screenshot](./home.png) 
+![Calendary Home Screenshot](./public/home.png) 
 
 ---
 

@@ -371,5 +371,279 @@ text-decoration: none;
 }
 
 .container .containerBottom{
-    
+        display: flex
+;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding-top: 24px;
+    border-top: 1px solid rgb(212, 224, 237);
+}
+
+.containerBottom .container{
+        display: flex
+;
+flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+}
+
+.containerBottom .container .containerLanguage{
+    cursor: pointer;
+    display: flex
+;
+    position: relative;
+    z-index: 1001;
+    width: fit-content;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.containerBottom .container .containerLanguage .containerText{
+        display: flex
+;
+    gap: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(11, 53, 88);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.containerBottom .container .containerLanguage .containerText {
+    display: flex
+;
+    gap: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(11, 53, 88);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+.containerBottom .container .containerLanguage .containerText .iconGlobal{
+    color: rgb(11, 53, 88);
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+}
+
+
+.containerBottom .container .containerLanguage .containerText .iconArrow{
+        color: rgb(11, 53, 88);
+}
+
+.containerBottom .container .containerLanguage .containerAllLanguages{
+    position: absolute;
+    z-index: 1003;
+    display: flex
+;
+    padding-bottom: 6px;
+    min-width: 220px;
+    transition: 0.2s;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    bottom: 24px;
+    left: 0px;
+}
+
+.containerLanguage .containerAllLanguages .wrapperAllLanguages{
+        display: flex
+;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(231, 237, 246);
+    border-radius: 4px;
+    box-shadow: rgba(71, 103, 136, 0.04) 0px 4px 5px 0px, rgba(71, 103, 136, 0.03) 0px 8px 15px 0px, rgba(71, 103, 136, 0.06);
+
+}
+
+
+.containerLanguage .containerAllLanguages .wrapperAllLanguages .stylesLanguages{
+        width: 1px;
+    height: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 1px;
+    left: 1px;
+}
+
+.containerLanguage .containerAllLanguages .wrapperAllLanguages .containerNames a{
+position: relative;
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 16px;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: rgb(71, 103, 136);
+    font-weight: 600;
+    background-color: rgb(240, 243, 248);
+    text-decoration: none;
+}
+
+.containerLanguage .containerAllLanguages .wrapperAllLanguages .decorationLanguages{
+width: 1px;
+    height: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 1px;
+    left: 1px;
+}
+
+.containerBottom .container .containerOptions{
+        display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: auto;
+}
+
+.containerOptions a{
+    cursor: pointer;
+    transition: 0.2s linear, background-position 1ms, background-size 1ms;
+    color: rgb(11, 53, 88);
+    position: relative;
+    height: fit-content;
+    flex-direction: row;
+    padding: 0px;
+    display: inline-flex
+;
+    opacity: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+.containerOptions .buttonCookies{
+        border: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    outline: none;
+    appearance: none;
+}
+
+.containerOptions .buttonCookiesEnglish{
+    cursor: pointer;
+    transition: 0.2s linear, background-position 1ms, background-size 1ms;
+    color: rgb(11, 53, 88);
+    position: relative;
+    height: fit-content;
+    flex-direction: row;
+    padding: 0px;
+    display: inline-flex
+;
+    opacity: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    font-family: gilroy, "gilroy Fallback";
+    font-weight: 500;
+
+    border: none;
+    margin: 0px;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    font: inherit;
+    outline: none;
+    appearance: none;
+}
+
+.containerOptions .buttonPrivacy{
+    cursor: pointer;
+    transition: 0.2s linear, background-position 1ms, background-size 1ms;
+    color: rgb(11, 53, 88);
+    position: relative;
+    height: fit-content;
+    flex-direction: row;
+    padding: 0px;
+    display: inline-flex
+;
+    opacity: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    font-family: gilroy, "gilroy Fallback";
+    font-weight: 500;
+
+        border: none;
+    margin: 0px;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    font: inherit;
+    outline: none;
+    appearance: none;
+}
+
+
+.containerOptions .buttonPrivacy span{
+        display: inline-flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 4px;
+    width: auto;
+}
+
+.containerBottom .container .rights{
+        display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+}
+
+.rights span{
+        color: rgb(71, 103, 136);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    font-weight: 500;
 }

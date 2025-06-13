@@ -68,7 +68,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
         <div className={styles.container}>
           <div className={styles.headerBottom}>
             <a href="#">
-              <img src="https://marketing-assets.calendly.com/media/logo.svg" width="166" alt="Logo" />
+              <img src="./logo.png" height={60} alt="Logo" />
             </a>
             <ul>
               

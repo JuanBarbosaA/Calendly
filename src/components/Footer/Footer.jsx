@@ -1137,6 +1137,7 @@ export default function Footer() {
               <div className={styles.containerLanguage}>
                 <div className={styles.containerText}>
                   <svg
+                  className={styles.iconGlobal}
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -1145,7 +1146,6 @@ export default function Footer() {
                     viewBox="0 0 16 16"
                     alt="Globe"
                     aria-hidden="true"
-                    class="sc-6468d002-2 PhnXw"
                   >
                     <circle
                       cx="8.017"
@@ -1164,6 +1164,7 @@ export default function Footer() {
                   </svg>
                   <span>English</span>
                   <svg
+                  className={styles.iconArrow}
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
@@ -1182,9 +1183,9 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div className={styles.containerAllLanguages}>
-                  <div>
-                    <div></div>
-                    <div data-focus-lock-disabled="false">
+                  <div className={styles.wrapperAllLanguages}>
+                    <div className={styles.stylesLanguages}></div>
+                    <div className={styles.containerNames}>
                       <a
                         lang="en"
                         tabindex="0"
@@ -1221,7 +1222,7 @@ export default function Footer() {
                         Português
                       </a>
                     </div>
-                    <div></div>
+                    <div className={styles.decorationLanguages}></div>
                   </div>
                 </div>
               </div>
@@ -1239,13 +1240,13 @@ export default function Footer() {
                 >
                   <span>Status</span>
                 </a>
-                <button type="button">
+                <button className={styles.buttonCookies} type="button">
                   Configuración de cookies
                 </button>
-                <button>
+                <button className={styles.buttonCookiesEnglish}>
                   <span>Cookie Settings</span>
                 </button>
-                <button>
+                <button className={styles.buttonPrivacy}>
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
