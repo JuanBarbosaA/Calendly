@@ -21,10 +21,10 @@ export default function AnimatedBackground() {
             <div className={styles.containerInfo}>
               <p>Get started in seconds – for free.</p>
               <div className={styles.containerButtons}>
-                <a href="">
+                <a className={styles.buttonSignUp} href="">
                   <span>Sign up for free</span>
                 </a>
-                <a href="">
+                <a className={styles.buttonGetDemo} href="">
                   <span>Get a demo</span>
                 </a>
               </div>

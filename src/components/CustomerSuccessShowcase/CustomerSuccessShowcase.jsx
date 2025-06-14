@@ -232,7 +232,7 @@ export default function CustomerSuccessShowcase() {
           <div className={styles.containerInfo}>
             <div className={styles.containerCustomerStories}>
               <a href="#">
-                <span>View customer stories</span>
+                <span className={styles.viewText}>View customer stories</span>
                 <span className={styles.icon}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

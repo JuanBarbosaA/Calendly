@@ -1,168 +1,300 @@
 .howItWorksContainer {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: opacity 0.8s 0.4s, transform 0.6s 0.4s;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.8s 0.4s, transform 0.6s 0.4s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .howItWorksContentWrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
-    width: 100%;
-    flex-direction: row-reverse;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  flex-direction: row-reverse;
 }
 
 .stepsList {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 486px;
-    height: 650px;
-}
-
-.stepsList div {
- 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 486px;
+  height: 650px;
 }
 
 .stepIconInactive {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .stepIconActive {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .stepTitleInactive {
-    font-size: 20px;
-    line-height: 1.4;
-    color: rgb(166, 187, 209);
-    font-weight: 800;
+  font-size: 20px;
+  line-height: 1.4;
+  color: rgb(166, 187, 209);
+  font-weight: 800;
 }
 
 .stepTitleActive {
-    color: rgb(11, 53, 88);
-    font-size: 28px;
-    font-weight: 800;
-    line-height: 1.4;
+  color: rgb(11, 53, 88);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.4;
 }
 
 .stepsList .stepDescription {
-    width: 100%;
-    height: auto;
-    padding: 12px 4px;
-    color: rgb(71, 103, 136);
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 500;
+  width: 100%;
+  height: auto;
+  padding: 12px 4px;
+  color: rgb(71, 103, 136);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+
+.stepsList .stepDescription p{
+    padding-bottom: 12px;
 }
 
 .stepsList .stepItemActive {
-    padding: 24px 0 12px 0;
-    border-bottom: 2px solid rgb(212, 224, 237);
-    position: relative;
+  padding: 24px 0 12px 0;
+  border-bottom: 2px solid rgb(212, 224, 237);
+  position: relative;
 }
 
-/* Paso 1 */
 .stepItemActive.step1::after {
-    background-color: #006BFF;
+  background-color: #006BFF;
 }
-/* Paso 2 */
+
 .stepItemActive.step2::after {
-    background-color: #8247F5;
+  background-color: #8247F5;
 }
-/* Paso 3 */
+
 .stepItemActive.step3::after {
-    background-color: #E55CFF;
+  background-color: #E55CFF;
 }
-/* Paso 4 */
+
 .stepItemActive.step4::after {
-    background-color: #FFA600;
+  background-color: #FFA600;
 }
-/* Paso 5 */
+
 .stepItemActive.step5::after {
-    background-color: #14AA51;
+  background-color: #14AA51;
 }
 
 .stepsList .stepItemActive::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    height: 2px;
-    width: 0%;
-    animation: progressBarAnim 8s linear forwards;
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  animation: progressBarAnim 8s linear forwards;
 }
 
 .stepsList .stepItemInactive {
-    padding: 24px 0;
-    border-bottom: 1px solid rgb(212, 224, 237);
+  padding: 24px 0;
+  border-bottom: 1px solid rgb(212, 224, 237);
 }
 
 .stepsList button {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .stepsList .stepIconImageActive {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .stepsList .stepIconImageInactive {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .stepsList button div svg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .stepsList button div svg use {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .stepsList h3 {
-    
+  transition: all 0.4s ease;
 }
 
 .stepImageContainer {
-    height: 650px;
-    position: relative;
+  height: 650px;
+  position: relative;
 }
 
 .stepImageContent div {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 }
 
 .stepImageContent svg {
-    background-color: #f0f3f8;
-    border-radius: 24px;
+  background-color: #f0f3f8;
+  border-radius: 24px;
 }
 
 .stepImageContainer img {
-    width: 650px;
-    height: 650px;
+  width: 650px;
+  height: 650px;
 }
 
 @keyframes progressBarAnim {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.stepsList .stepItemActive,
+.stepsList .stepItemInactive {
+  transition: all 0.2s ease;
+}
+
+.stepsList h3 {
+  transition: all 0.5s ease;
+}
+
+.stepsList .stepDescriptionWrapper {
+  animation: fadeInUp 0.5s ease forwards;
+  overflow: hidden;
+  opacity: 1;
+  transform: none;
+}
+
+.stepDescriptionHidden {
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+  transform: translateY(10px);
+}
+
+.stepDescriptionVisible {
+  opacity: 1;
+  max-height: 500px;
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stepDescriptionWrapper {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.stepsList .stepDescriptionWrapper > * {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+.flashOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: flashAnimation 0.8s ease-in-out;
+  z-index: 5; /* Asegura que esté sobre el contenido */
+  pointer-events: none; /* Permite interacción con elementos debajo */
+}
+
+@keyframes flashAnimation {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+
+.containerViewAll {
+  flex-flow: wrap;
+}
+
+.containerViewAll a {
+      cursor: pointer;
+    transition: 0.2s linear, background-position 1ms, background-size 1ms;
+    color: rgb(11, 53, 88);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    position: relative;
+    height: fit-content;
+    flex-direction: row;
+    padding: 0px;
+    display: inline-flex
+;
+    opacity: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 4px;
+    text-align: left;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.containerViewAll a:hover{
+  color: rgb(71, 103, 136);
+}
+.containerViewAll a:hover .viewAllIcon{
+      transform: translateX(4px);
+    transition: transform 0.1s linear;
+}
+
+.viewAllIcon {
+  display: inline-flex;
+  align-items: center;
+  width: 28px;
+  height: 20px;
+}
+
+.viewAllIcon svg {
+  stroke-width: 1.5px;
 }

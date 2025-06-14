@@ -185,12 +185,8 @@
 }
 
 .containerInfo .containerButtons a{
-    
     cursor: pointer;
     transition: 0.2s linear, background-position 1ms, background-size 1ms;
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 107, 255);
-    background-color: rgb(0, 107, 255);
     padding: 10px 18px;
     font-size: 1.125rem;
     line-height: 1.6;
@@ -212,9 +208,25 @@
     text-decoration: none;
 }
 
-.containerInfo .containerButtons a:last-child{
+.containerInfo .containerButtons a.buttonSignUp{
+color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 107, 255);
+    background-color: rgb(0, 107, 255);
+}
+
+.containerInfo .containerButtons a.buttonSignUp:hover{
+        background-color: rgb(0, 78, 186);
+    border-color: rgb(0, 78, 186);
+}
+
+.containerInfo .containerButtons a.buttonGetDemo{
 
 color: rgb(71, 103, 136);
     border: 1px solid rgb(71, 103, 136);
     background-color: transparent;
+}
+
+
+.containerInfo .containerButtons a.buttonGetDemo:hover{
+        background-color: rgb(248, 249, 251);
 }

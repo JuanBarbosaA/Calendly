@@ -52,12 +52,23 @@ const steps = [
 export default function MoreThanSchedulingSteps() {
   const [activeIndex, setActiveIndex] = useState(0);
   const intervalRef = useRef(null);
+  const [flash, setFlash] = useState(false)
+
+  const triggerFlash = () => {
+    setFlash(true);
+    setTimeout(() => setFlash(false), 800); // Duración de la animación
+  };
 
   const startAutoAdvance = (fromIndex = 0) => {
     clearInterval(intervalRef.current);
     setActiveIndex(fromIndex);
+    triggerFlash();
     intervalRef.current = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % steps.length);
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % steps.length;
+        triggerFlash();
+        return next;
+      });
     }, 8000);
   };
 
@@ -74,40 +85,83 @@ export default function MoreThanSchedulingSteps() {
     <div className={styles.howItWorksContainer}>
       <div className={styles.howItWorksContentWrapper}>
         <div className={styles.stepsList}>
-          {steps.map((step, index) => (
-            <div
-              className={`${index === activeIndex ? `${styles.stepItemActive} ${styles[`step${index + 1}`]}` : styles.stepItemInactive}`}
-              key={index === activeIndex ? `active-${index}` : `inactive-${index}`}
-            >
-              <button
-                onClick={() => handleClick(index)}
-                className={index === activeIndex ? styles.stepButtonActive : ""}
+          {steps.map((step, index) => {
+            const isActive = index === activeIndex;
+            return (
+              <div
+                key={index}
+                className={`${
+                  isActive
+                    ? `${styles.stepItemActive} ${styles[`step${index + 1}`]}`
+                    : styles.stepItemInactive
+                }`}
               >
-                <div className={index === activeIndex ? styles.stepIconActive : styles.stepIconInactive}>
-                  <img
-                    className={index === activeIndex ? styles.stepIconImageActive : styles.stepIconImageInactive}
-                    src="/logo1.svg"
-                    alt="step icon"
-                  />
-                </div>
-                <h3 className={index === activeIndex ? styles.stepTitleActive : styles.stepTitleInactive}>
-                  {step.title}
-                </h3>
-              </button>
-              {index === activeIndex && (
-                <div className={styles.stepDescriptionWrapper}>
+                <button onClick={() => handleClick(index)}>
+                  <div
+                    className={
+                      isActive ? styles.stepIconActive : styles.stepIconInactive
+                    }
+                  >
+                    <img
+                      className={
+                        isActive
+                          ? styles.stepIconImageActive
+                          : styles.stepIconImageInactive
+                      }
+                      src="/logo1.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <h3
+                    className={
+                      isActive
+                        ? styles.stepTitleActive
+                        : styles.stepTitleInactive
+                    }
+                  >
+                    {step.title}
+                  </h3>
+                </button>
+                <div
+                  className={`${styles.stepDescriptionWrapper} ${
+                    isActive
+                      ? styles.stepDescriptionVisible
+                      : styles.stepDescriptionHidden
+                  }`}
+                >
                   <div className={styles.stepDescription}>
-                    <div>
-                      <p>{step.description}</p>
-                    </div>
+                    <p>{step.description}</p>
+                    <div className={styles.containerViewAll}>
+                                    <a href="">
+                                      <span className={styles.viewAllText}>Learn more</span>
+                                      <span className={styles.viewAllIcon}>
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="24"
+                                          height="24"
+                                          viewBox="0 0 24 24"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          strokeWidth="2"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        >
+                                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                                          <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg>
+                                      </span>
+                                    </a>
+                                  </div>
                   </div>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
 
         <div className={styles.stepImageContainer}>
+
+          {flash && <div className={styles.flashOverlay}></div>}
           <div className={styles.stepImageContent}>
             <svg
               width="650"
@@ -117,39 +171,20 @@ export default function MoreThanSchedulingSteps() {
             >
               <path
                 fill={steps[activeIndex].fill1}
-                className="animated-shape-01"
-                style={{ mixBlendMode: "multiply", opacity: 0.8 }}
                 d="M416.106 455.201C329.303 380.335 196.923 375.87 104.313 455.476C17.0374 530.499 -3.82247 659.835 55.4699 758.41C117.902 862.279 243.339 899.77 348.61 857.821C435.413 932.687 567.792 937.151 660.403 857.546C747.678 782.523 768.538 653.187 709.245 554.611C646.844 450.785 521.407 413.294 416.106 455.201Z"
-              >
-                <animateMotion
-                  dur="20s"
-                  repeatCount="indefinite"
-                  path="M0,0 0,-539.08 0,0 Z"
-                ></animateMotion>
-              </path>
+              />
               <path
                 fill={steps[activeIndex].fill2}
-                className="animated-shape-02"
-                style={{ mixBlendMode: "multiply", opacity: 0.8 }}
                 d="M83.37 -406.085L537.482 9.53107C567.697 37.1842 569.772 84.0782 542.119 114.293L126.503 568.405C81.9305 617.106 0.655332 587.633 -2.2665 521.621L-40.7624 -348.107C-43.6843 -414.118 34.6239 -450.699 83.37 -406.085Z"
-              >
-                <animateMotion
-                  dur="20s"
-                  repeatCount="indefinite"
-                  path="M0,0 0,241.45 0,0 Z"
-                ></animateMotion>
-              </path>
+              />
             </svg>
 
             <div>
               <img
-                data-testid="image"
-                alt={steps[activeIndex].title}
-                loading="eager"
-                width="1300"
-                height="1300"
-                decoding="async"
                 src={steps[activeIndex].image}
+                alt={steps[activeIndex].title}
+                width="650"
+                height="650"
               />
             </div>
           </div>

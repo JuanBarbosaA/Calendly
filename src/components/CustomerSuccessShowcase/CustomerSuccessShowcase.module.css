@@ -4,8 +4,6 @@
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-
-  padding: 0px 40px;
 }
 
 .wrapper {
@@ -90,6 +88,16 @@
   font-family: gilroy, "gilroy Fallback";
   font-weight: 600;
   text-decoration: none;
+}
+
+.containerInfo .containerCustomerStories a:hover{
+  color: rgb(71, 103, 136);
+}
+
+
+.containerInfo .containerCustomerStories a:hover .icon{
+  transform: translateX(4px);
+      transition: transform 0.1s linear;
 }
 
 .containerInfo .containerCustomerStories a .icon {

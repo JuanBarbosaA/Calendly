@@ -68,7 +68,6 @@ header {
 .headerBottom ul {
   display: flex;
   list-style: none;
-  gap: 40px;
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -100,18 +99,40 @@ header {
   cursor: pointer;
 }
 
-.getStarted {
-  background-color: #006bff;
-  color: white;
-  border-radius: 8px;
-  border: none;
-  padding: 10px 17px;
-  line-height: 1.4;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
+.login:hover{
+  color: rgb(71, 103, 136);
 }
 
+.getStarted {
+      cursor: pointer;
+    transition: 0.2s linear, background-position 1ms, background-size 1ms;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 107, 255);
+    background-color: rgb(0, 107, 255);
+    padding: 10px 16px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    position: relative;
+    height: fit-content;
+    flex-direction: row;
+    display: inline-flex
+;
+    opacity: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: gilroy, "gilroy Fallback";
+    font-weight: 600;
+}
+
+.getStarted:hover{
+      background-color: rgb(0, 78, 186);
+    border-color: rgb(0, 78, 186);
+}
 
 
 .dropdownMenu {
@@ -147,9 +168,62 @@ header {
 
 
 .headerBottom ul li {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  position: relative;
+  transition: 0.2s linear;
+      cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
 }
+
+
+.headerBottom ul li a{
+   margin: 0px 12px;
+        cursor: pointer;
+    position: relative;
+    display: inline-flex
+;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+        -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    gap: 2px;
+    text-decoration: none;
+}
+
+.headerBottom  li a:hover{
+   background-color: rgb(240, 243, 248);
+    color: rgb(11, 53, 88);
+}
+
+
+.headerBottom ul li a button{
+  cursor: pointer;
+    display: flex
+;
+    width: 24px;
+    height: 24px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    outline: none;
+    appearance: none;
+}
+
+.headerBottom ul li a:hover button svg {
+  transform: rotate(180deg);
+}
+

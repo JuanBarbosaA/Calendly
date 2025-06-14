@@ -209,7 +209,7 @@ export default function PricingPlansSection() {
 
         <div className={styles.containerInfo}>
           <a href="">
-            <span>Learn more on our pricing page</span>
+            <span className={styles.infoText}>Learn more on our pricing page</span>
             <span className={styles.containerIcon}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

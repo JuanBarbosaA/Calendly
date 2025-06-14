@@ -146,6 +146,17 @@
     text-decoration: none;
 }
 
+
+.trustBar .containerInfo a:hover{
+        color: rgb(71, 103, 136);
+}
+
+
+.trustBar .containerInfo a:hover .iconWrapper{
+    transform: translateX(4px);
+        transition: transform 0.1s linear;
+}
+
 .trustBar .containerInfo a .iconWrapper{
     transition: transform 0.1s linear;
         display: inline-flex

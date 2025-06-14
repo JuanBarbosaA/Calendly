@@ -68,7 +68,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
         <div className={styles.container}>
           <div className={styles.headerBottom}>
             <a href="#">
-              <img src="./logo.png" height={60} alt="Logo" />
+              <img src="./logo.png" height={55} alt="Logo" />
             </a>
             <ul>
               
@@ -79,12 +79,19 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
 >
 
 
-                <span>Product</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
+                <a>Product
+<button>
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" d="m1.5 1 6 6 6-6" />
                 </svg>
+</button>
+                
                 <span className={styles.animationLine}></span>
+                </a>
+                
+                
               </li>
+              
               
 
 <li
@@ -94,13 +101,16 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
 >
 
                 
-                <span>Solutions</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
+                <a>Solutions
+<button>
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" d="m1.5 1 6 6 6-6" />
                 </svg>
+</button>
                 <span className={styles.animationLine}></span>
+                </a>
               </li>
-              <li><span>Enterprise</span></li>
+              <li><a>Enterprise</a></li>
               <li
   onMouseEnter={() => setIsMenuOpen("resources")}   // hover abre el menú
   onClick={() => toggleMenu("resources")}           // click toggle (abre/cierra)
@@ -113,13 +123,17 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
   onClick={() => setIsMenuOpen(null)} // cierre con click
   className={isMenuOpen === "solutions" ? styles.active : ""}
 ></li>
-                <span>Resources</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
+                <a>Resources
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" fill="none" stroke="currentColor" viewBox="0 0 15 8">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" d="m1.5 1 6 6 6-6" />
                 </svg>
+                  </button>
                 <span className={styles.animationLine}></span>
+                </a>
+                
               </li>
-              <li><span>Pricing</span></li>
+              <li><a>Pricing</a></li>
             </ul>
             <div className={styles.authButtons}>
               <div>

@@ -1137,7 +1137,7 @@ export default function Footer() {
               <div className={styles.containerLanguage}>
                 <div className={styles.containerText}>
                   <svg
-                  className={styles.iconGlobal}
+                    className={styles.iconGlobal}
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -1164,7 +1164,7 @@ export default function Footer() {
                   </svg>
                   <span>English</span>
                   <svg
-                  className={styles.iconArrow}
+                    className={styles.iconArrow}
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
@@ -1234,10 +1234,7 @@ export default function Footer() {
                 <a href="/legal">
                   <span>Legal</span>
                 </a>
-                <a
-                  target="__blank"
-                  href="https://www.calendlystatus.com/"
-                >
+                <a target="__blank" href="https://www.calendlystatus.com/">
                   <span>Status</span>
                 </a>
                 <button className={styles.buttonCookies} type="button">
@@ -1284,7 +1281,6 @@ export default function Footer() {
               <div className={styles.rights}>
                 <span>Copyright Calendly 2025</span>
               </div>
-
             </div>
           </div>
         </div>

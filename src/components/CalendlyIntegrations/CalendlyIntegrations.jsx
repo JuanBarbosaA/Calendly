@@ -160,21 +160,7 @@ export default function CalendlyIntegrations() {
                     </div>
                     <button>
                       <div className={styles.card__iconWrapper}>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M9.333 22..."
-                          />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 32 32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.333 22.667 22.667 9.333M9.333 9.333h13.334v13.334"></path></svg>
                       </div>
                     </button>
                   </div>
@@ -196,21 +182,7 @@ export default function CalendlyIntegrations() {
                     </div>
                     <button>
                       <div className={styles.card__iconWrapper}>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M9.333 22..."
-                          />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 32 32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.333 22.667 22.667 9.333M9.333 9.333h13.334v13.334"></path></svg>
                       </div>
                     </button>
                   </div>

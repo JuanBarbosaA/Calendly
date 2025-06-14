@@ -118,6 +118,11 @@
   cursor: pointer;
 }
 
+.buttonGoogle:hover{
+  background-color: rgb(0, 78, 186);
+    border-color: rgb(0, 78, 186);
+}
+
 .buttonGoogle span {
   width: 100%;
 }
@@ -136,6 +141,11 @@
   border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.buttonMicrosoft:hover{
+  background-color: rgb(71, 103, 136);
+    border-color: rgb(71, 103, 136);
 }
 
 .buttonMicrosoft span {

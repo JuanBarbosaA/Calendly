@@ -276,6 +276,10 @@ display: inline-block;
   width: -webkit-fill-available;
   text-decoration: none;
 }
+.contentCard .contentButton a:hover{
+      background-color: rgb(0, 78, 186);
+    border-color: rgb(0, 78, 186);
+}
 
 .containerInfo {
   display: flex;
@@ -302,6 +306,15 @@ display: inline-block;
   text-align: left;
   font-weight: 600;
   text-decoration: none;
+}
+
+.containerInfo a:hover{
+      color: rgb(71, 103, 136);
+}
+
+.containerInfo a:hover .containerIcon{
+  transform: translateX(4px);
+  transition: transform 0.1s linear;
 }
 
 .containerInfo .containerIcon {

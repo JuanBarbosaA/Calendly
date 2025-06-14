@@ -76,6 +76,12 @@ footer{
     max-width: 670px;
 }
 
+
+.containerTop .containerTopCard:hover .wrapperIcon svg{
+    transform: translate(6px, -6px);
+        transition: transform 0.175s ease-in-out;
+}
+
 .containerTopCard .iconCard{
         height: 100%;
     flex-direction: column;
@@ -243,9 +249,15 @@ text-decoration: none;
     text-decoration: none;
 }
 
+
+.containerMiddle .column ul li a:hover{
+    text-decoration: underline;
+}
+
 .containerMiddle .column ul li div {
     display: flex
 ;
+user-select: none;
     width: fit-content;
     height: fit-content;
     -webkit-box-align: center;
@@ -321,6 +333,13 @@ text-decoration: none;
     text-decoration: none;
 }
 
+
+.containerExtensionsSocial .containerExtension .extension:hover{
+    background-color: #e7edf6;
+    border-color: rgb(231, 237, 246);
+    color: rgb(71, 103, 136);
+}
+
 .containerExtensionsSocial .containerExtension .extension .wrapperLogo{
     width: 32px;
     height: 32px;
@@ -362,6 +381,11 @@ text-decoration: none;
 .containerExtensionsSocial .containerSocial .containerLogo{
     cursor: pointer;
     text-decoration: none;
+}
+
+
+.containerExtensionsSocial .containerSocial .containerLogo:hover{
+        opacity: 0.8;
 }
 
 .containerSocial .containerLogo div{
@@ -415,16 +439,9 @@ flex-direction: row;
     line-height: 1.5;
 }
 
-.containerBottom .container .containerLanguage .containerText {
-    display: flex
-;
-    gap: 2px;
-    -webkit-box-align: center;
-    align-items: center;
-    color: rgb(11, 53, 88);
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.5;
+
+.containerBottom .container .containerLanguage .containerText:hover *{
+        color: rgb(0, 107, 255);
 }
 
 
@@ -539,6 +556,14 @@ width: 1px;
     text-decoration: none;
 }
 
+.containerOptions a:hover{
+    color: rgb(71, 103, 136);
+}
+
+
+.containerOptions button:hover{
+    color: rgb(71, 103, 136);
+}
 
 .containerOptions .buttonCookies{
         border: none;
@@ -552,6 +577,7 @@ width: 1px;
     text-align: inherit;
     outline: none;
     appearance: none;
+    display: none;
 }
 
 .containerOptions .buttonCookiesEnglish{
@@ -583,7 +609,7 @@ width: 1px;
     width: auto;
     overflow: visible;
     background: transparent;
-    font: inherit;
+
     outline: none;
     appearance: none;
 }
@@ -609,7 +635,6 @@ width: 1px;
     text-align: left;
     font-size: 0.75rem;
     line-height: 1.5;
-    font-family: gilroy, "gilroy Fallback";
     font-weight: 500;
 
         border: none;
@@ -617,7 +642,6 @@ width: 1px;
     width: auto;
     overflow: visible;
     background: transparent;
-    font: inherit;
     outline: none;
     appearance: none;
 }
