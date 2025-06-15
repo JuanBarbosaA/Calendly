@@ -33,6 +33,64 @@
   width: 40px;
 }
 
+.stepItemInactive.step1 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #0252c2;
+}
+
+.stepItemInactive.step2 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #8247F5;
+}
+.stepItemInactive.step3 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #E55CFF;
+}
+
+.stepItemInactive.step4 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #FFA600;
+}
+
+.stepItemInactive.step5 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #14AA51;
+}
+
+
+
+
+.stepItemActive.step1 .stepIconActive svg{
+    fill: #006BFF;
+    stroke-width: 3;
+    stroke: #0252c2;
+}
+
+.stepItemActive.step2 .stepIconActive svg{
+    fill: #8247F5;
+    stroke-width: 3;
+    stroke: #6238b6;
+}
+
+.stepItemActive.step3 .stepIconActive svg{
+    fill: #E55CFF;
+    stroke-width: 3;
+    stroke: #ad47c2;
+}
+
+.stepItemActive.step4 .stepIconActive svg{
+    fill: #FFA600;
+    stroke-width: 3;
+    stroke: #c98301;
+}
+
+.stepItemActive.step5 .stepIconActive svg{
+    fill: #14AA51;
+    stroke-width: 3;
+    stroke: #0e7738;
+}
+
+
 .stepTitleInactive {
   font-size: 20px;
   line-height: 1.4;

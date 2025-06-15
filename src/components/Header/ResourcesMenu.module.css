@@ -67,9 +67,7 @@
   align-items: center;
 }
 
-.menuItem:hover {
-  background-color: #f8f9fb;
-}
+
 
 .iconWrapper {
   flex-shrink: 0;
@@ -155,8 +153,14 @@ display: flex;
 }
 
 .submenuItem:hover {
-  background-color: #f8f9fb;
+  color: rgb(0, 107, 255);;
 }
+
+.menuItem:hover .itemContent span{
+  color: rgb(0, 107, 255);
+}
+
+
 
 .submenuItem span {
   font-size: 16px;
@@ -203,6 +207,8 @@ display: flex;
   line-height: 1.6;
 }
 
+
+
 .cardContent p {
   font-size: 14px;
   color: #476788;
@@ -216,6 +222,10 @@ display: flex;
 
 .featuredCard{
    
+}
+
+.featuredCard a:hover h4{
+  color: rgb(0, 107, 255);
 }
 
 .featuredCard a{

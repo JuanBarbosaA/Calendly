@@ -50,8 +50,8 @@
   color: #0b3558;
 }
 
-.menuItem:hover {
-  background-color: #f8f9fb;
+.menuItem:hover .itemContent span{
+  color: rgb(0, 107, 255);
 }
 
 .iconWrapper {
@@ -83,6 +83,7 @@
   font-weight: 600;
   font-size: 18px;
 }
+
 
 .itemContent small {
   font-weight: 600;
@@ -116,7 +117,7 @@
 }
 
 .submenuItem:hover {
-  background-color: #f8f9fb;
+  color: rgb(0, 107, 255);;
 }
 
 .submenuItem span {
@@ -143,6 +144,8 @@
   overflow: hidden;
   margin-top: 24px;
 }
+
+
 
 .featuredCard a {
   display: flex;

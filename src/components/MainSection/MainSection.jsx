@@ -9,15 +9,10 @@ import PricingPlansSection from "../PricingPlans/PricingPlansSection";
 import SecurityBanner from "../SecurityBanner/SecurityBanner";
 import styles from "./MainSection.module.css"
 
-export default function MainSection({ isMenuOpen, setIsMenuOpen }) {
+export default function MainSection() {
   return (
     <main>
-      {isMenuOpen && (
-        <div 
-          className={styles.overlay} 
-          onClick={() => setIsMenuOpen(null)}
-        />
-      )}
+      
       <div className={styles.container}>
         <Hero />
         <BrandCarousel/>

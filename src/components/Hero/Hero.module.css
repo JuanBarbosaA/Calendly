@@ -14,65 +14,58 @@
   max-width: 1200px;
 }
 
-.backgroundSvg {
+.backgroundSvg{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  overflow: visible;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
 }
 
-.animatedPath1, .animatedPath2 {
-  will-change: transform;
-  mix-blend-mode: multiply;
-}
-.animatedPath1 {
-  fill: rgb(0, 153, 255);
-  transform-origin: 72% 38%;
-  transform: translate(-11.1%, -25%) rotate(37deg) scale(1.1);
-  animation: floatAnimation1 32.5s ease-in-out infinite;
+.backgroundSvg .animatedPath1{
+    will-change: transform;
+    mix-blend-mode: multiply;
+    fill: rgb(0, 153, 255);
+    transform-origin: 72% 38%;
+    animation: 30s ease-in-out 0s infinite normal none running lcFltb;
 }
 
-.animatedPath2 {
-  fill: rgb(229, 92, 255);
-  transform-origin: 60% 15%;
-  transform: scale(1.1);
-  animation: floatAnimation2 30.5s ease-in-out infinite;
+.backgroundSvg .animatedPath2{
+    will-change: transform;
+    mix-blend-mode: multiply;
+    fill: rgb(229, 92, 255);
+    transform-origin: 60% 15%;
+    animation: 30s ease-in-out 0s infinite normal none running jgLnwn;
 }
 
-@keyframes floatAnimation1 {
+@keyframes lcFltb{
   0% {
-    transform: translate(-11.1%, -25%) rotate(37deg) scale(1.1);
-  }
-  25% {
-    transform: translate(5%, -10%) rotate(100deg) scale(1.12);
-  }
-  50% {
-    transform: translate(12%, -5%) rotate(180deg) scale(1.15);
-  }
-  75% {
-    transform: translate(5%, -10%) rotate(270deg) scale(1.12);
-  }
-  100% {
-    transform: translate(-11.1%, -25%) rotate(397deg) scale(1.1);
-  }
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+33% {
+    transform: translate(-11.1%, -33%) rotate(37deg) scale(0.8);
+}
+66% {
+    transform: translate(11.9%, -22%) rotate(52deg) scale(1.35);
+}
+100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
 }
 
-@keyframes floatAnimation2 {
-  0%, 100% {
-    transform: translate(13.662%, 20.581%) rotate(110deg) scale(1.1);
-  }
-  25% {
-    transform: translate(13.662%, 14.5%) rotate(85deg) scale(1.12);
-  }
-  50% {
-    transform: translate(13.662%, 10%) rotate(-34deg) scale(1.15);
-  }
-  75% {
-    transform: translate(13.662%, 15.3%) rotate(45deg) scale(1.12);
-  }
+@keyframes jgLnwn{
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+33% {
+    transform: translate(30.2%, 25.6%) rotate(27.7deg) scale(0.85);
+}
+66% {
+    transform: translate(18%, 28.5%) rotate(96deg) scale(1.125);
+}
+100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
 }
 
 .title {

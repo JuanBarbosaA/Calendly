@@ -34,6 +34,64 @@
   width: 40px;
 }
 
+.stepItemInactive.step1 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #0252c2;
+}
+
+.stepItemInactive.step2 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #8247F5;
+}
+.stepItemInactive.step3 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #E55CFF;
+}
+
+.stepItemInactive.step4 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #FFA600;
+}
+
+.stepItemInactive.step5 .stepIconInactive svg{
+    stroke-width: 1.6;
+    stroke: #14AA51;
+}
+
+
+
+
+.stepItemActive.step1 .stepIconActive svg{
+    fill: #006BFF;
+    stroke-width: 3;
+    stroke: #0252c2;
+}
+
+.stepItemActive.step2 .stepIconActive svg{
+    fill: #8247F5;
+    stroke-width: 3;
+    stroke: #6238b6;
+}
+
+.stepItemActive.step3 .stepIconActive svg{
+    fill: #E55CFF;
+    stroke-width: 3;
+    stroke: #ad47c2;
+}
+
+.stepItemActive.step4 .stepIconActive svg{
+    fill: #FFA600;
+    stroke-width: 3;
+    stroke: #c98301;
+}
+
+.stepItemActive.step5 .stepIconActive svg{
+    fill: #14AA51;
+    stroke-width: 3;
+    stroke: #0e7738;
+}
+
+
 .stepTitleInactive {
   font-size: 20px;
   line-height: 1.4;
@@ -56,11 +114,6 @@
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 500;
-}
-
-
-.stepsList .stepDescription p{
-    padding-bottom: 12px;
 }
 
 .stepsList .stepItemActive {
@@ -247,54 +300,4 @@
   0% { opacity: 0; }
   20% { opacity: 1; }
   100% { opacity: 0; }
-}
-
-
-
-
-.containerViewAll {
-  flex-flow: wrap;
-}
-
-.containerViewAll a {
-      cursor: pointer;
-    transition: 0.2s linear, background-position 1ms, background-size 1ms;
-    color: rgb(11, 53, 88);
-    font-size: 0.875rem;
-    line-height: 1.4;
-    position: relative;
-    height: fit-content;
-    flex-direction: row;
-    padding: 0px;
-    display: inline-flex
-;
-    opacity: 1;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    gap: 8px;
-    border-radius: 4px;
-    text-align: left;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.containerViewAll a:hover{
-  color: rgb(71, 103, 136);
-}
-.containerViewAll a:hover .viewAllIcon{
-      transform: translateX(4px);
-    transition: transform 0.1s linear;
-}
-
-.viewAllIcon {
-  display: inline-flex;
-  align-items: center;
-  width: 28px;
-  height: 20px;
-}
-
-.viewAllIcon svg {
-  stroke-width: 1.5px;
 }

@@ -165,6 +165,10 @@ header {
 .headerBottom ul li.active .animationLine {
   width: 100%;
 }
+.headerBottom ul li.active a button svg {
+  transform: rotate(180deg);
+}
+
 
 
 .headerBottom ul li {
@@ -223,7 +227,4 @@ header {
     appearance: none;
 }
 
-.headerBottom ul li a:hover button svg {
-  transform: rotate(180deg);
-}
 

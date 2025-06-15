@@ -60,9 +60,11 @@
   color: #0b3558;
 }
 
-.menuItem:hover {
-  background-color: #f8f9fb;
+
+.menuItem:hover .itemContent span{
+  color: rgb(0, 107, 255);
 }
+
 
 .iconWrapper {
   flex-shrink: 0;
@@ -145,7 +147,7 @@ display: flex;
 }
 
 .submenuItem:hover {
-  background-color: #f8f9fb;
+  color: rgb(0, 107, 255);;
 }
 
 .submenuItem span {
