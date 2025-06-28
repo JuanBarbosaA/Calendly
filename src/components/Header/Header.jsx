@@ -7,6 +7,7 @@ import ResourcesMenu from "./ResourcesMenu";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hideTopBar, setHideTopBar] = useState(false);
+  const [isMenuMobileOpen, setIsMenuMobileOpen] = useState(false);
 
   useEffect(() => {
     let timeout;
@@ -27,6 +28,14 @@ export default function Header() {
     } else {
       setIsMenuOpen(menu);
     }
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMenuMobileOpen(!isMenuMobileOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMenuMobileOpen(false);
   };
 
   const renderDropdownMenu = () => {
@@ -90,14 +99,14 @@ export default function Header() {
 
       <div
         className={styles.wrapperBottom}
-        onMouseLeave={() => setIsMenuOpen(null)} 
+        onMouseLeave={() => setIsMenuOpen(null)}
       >
         <div className={styles.container}>
           <div className={styles.headerBottom}>
             <a href="#">
               <img src="./logo.png" height={55} alt="Logo" />
             </a>
-            <ul>
+            <ul className={styles.menuDesktop}>
               <li
                 onMouseEnter={() => setIsMenuOpen("product")} // hover abre el menú
                 onClick={() => toggleMenu("product")} // click toggle (abre/cierra)
@@ -192,6 +201,7 @@ export default function Header() {
                 <a>Pricing</a>
               </li>
             </ul>
+
             <div className={styles.authButtons}>
               <div>
                 <button className={styles.login}>Log In</button>
@@ -199,11 +209,92 @@ export default function Header() {
               <div>
                 <button className={styles.getStarted}>Get started</button>
               </div>
+              <div className={styles.hamburgerMenu} onClick={toggleMobileMenu}>
+                <div className={styles.estilosMenu1}></div>
+                <div className={styles.estilosMenu2}></div>
+              </div>
             </div>
           </div>
         </div>
         {renderDropdownMenu()}
       </div>
+
+      {isMenuMobileOpen && (
+        <ul className={styles.menuMobileOpen}>
+          <div className={styles.wrapperMenuMobile}>
+            <li onClick={closeMobileMenu}>
+              <a href="/features">
+                Product
+              </a>
+            </li>
+            <li className={styles.arrow}>
+              <a href="/solutions">
+                Solutions
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 13 7"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.843.256a.97.97 0 0 1 1.314 0l5.571 5.25a.84.84 0 0 1 0 1.238.97.97 0 0 1-1.313 0L6.5 2.112 1.585 6.744a.97.97 0 0 1-1.313 0 .84.84 0 0 1 0-1.238z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li onClick={closeMobileMenu}>
+              <a
+                href="/solutions/enterprise"
+              >
+                Enterprise
+              </a>
+            </li>
+            <li onClick={closeMobileMenu}>
+              <a href="/pricing">
+                Pricing
+              </a>
+            </li>
+            <li className={styles.arrow}>
+              <a href="/resources">
+                Resources
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 13 7"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5.843.256a.97.97 0 0 1 1.314 0l5.571 5.25a.84.84 0 0 1 0 1.238.97.97 0 0 1-1.313 0L6.5 2.112 1.585 6.744a.97.97 0 0 1-1.313 0 .84.84 0 0 1 0-1.238z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </div>
+          <div className={styles.containerButtons}>
+            <li className={styles.skip}>
+              <a className={styles.login}
+                href="/login"
+              >
+                <span>Log In</span>
+              </a>
+            </li>
+            <li className={styles.skip}>
+              <div>
+                <a
+                className={styles.signup}
+                  href="/signup"
+                >
+                  <span>Get started</span>
+                </a>
+              </div>
+            </li>
+          </div>
+        </ul>
+      )}
     </header>
   );
 }

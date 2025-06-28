@@ -33,63 +33,59 @@
   width: 40px;
 }
 
-.stepItemInactive.step1 .stepIconInactive svg{
-    stroke-width: 1.6;
-    stroke: #0252c2;
+.stepItemInactive.step1 .stepIconInactive svg {
+  stroke-width: 1.6;
+  stroke: #0252c2;
 }
 
-.stepItemInactive.step2 .stepIconInactive svg{
-    stroke-width: 1.6;
-    stroke: #8247F5;
+.stepItemInactive.step2 .stepIconInactive svg {
+  stroke-width: 1.6;
+  stroke: #8247f5;
 }
-.stepItemInactive.step3 .stepIconInactive svg{
-    stroke-width: 1.6;
-    stroke: #E55CFF;
-}
-
-.stepItemInactive.step4 .stepIconInactive svg{
-    stroke-width: 1.6;
-    stroke: #FFA600;
+.stepItemInactive.step3 .stepIconInactive svg {
+  stroke-width: 1.6;
+  stroke: #e55cff;
 }
 
-.stepItemInactive.step5 .stepIconInactive svg{
-    stroke-width: 1.6;
-    stroke: #14AA51;
+.stepItemInactive.step4 .stepIconInactive svg {
+  stroke-width: 1.6;
+  stroke: #ffa600;
 }
 
-
-
-
-.stepItemActive.step1 .stepIconActive svg{
-    fill: #006BFF;
-    stroke-width: 3;
-    stroke: #0252c2;
+.stepItemInactive.step5 .stepIconInactive svg {
+  stroke-width: 1.6;
+  stroke: #14aa51;
 }
 
-.stepItemActive.step2 .stepIconActive svg{
-    fill: #8247F5;
-    stroke-width: 3;
-    stroke: #6238b6;
+.stepItemActive.step1 .stepIconActive svg {
+  fill: #006bff;
+  stroke-width: 3;
+  stroke: #0252c2;
 }
 
-.stepItemActive.step3 .stepIconActive svg{
-    fill: #E55CFF;
-    stroke-width: 3;
-    stroke: #ad47c2;
+.stepItemActive.step2 .stepIconActive svg {
+  fill: #8247f5;
+  stroke-width: 3;
+  stroke: #6238b6;
 }
 
-.stepItemActive.step4 .stepIconActive svg{
-    fill: #FFA600;
-    stroke-width: 3;
-    stroke: #c98301;
+.stepItemActive.step3 .stepIconActive svg {
+  fill: #e55cff;
+  stroke-width: 3;
+  stroke: #ad47c2;
 }
 
-.stepItemActive.step5 .stepIconActive svg{
-    fill: #14AA51;
-    stroke-width: 3;
-    stroke: #0e7738;
+.stepItemActive.step4 .stepIconActive svg {
+  fill: #ffa600;
+  stroke-width: 3;
+  stroke: #c98301;
 }
 
+.stepItemActive.step5 .stepIconActive svg {
+  fill: #14aa51;
+  stroke-width: 3;
+  stroke: #0e7738;
+}
 
 .stepTitleInactive {
   font-size: 20px;
@@ -122,23 +118,23 @@
 }
 
 .stepItemActive.step1::after {
-  background-color: #006BFF;
+  background-color: #006bff;
 }
 
 .stepItemActive.step2::after {
-  background-color: #8247F5;
+  background-color: #8247f5;
 }
 
 .stepItemActive.step3::after {
-  background-color: #E55CFF;
+  background-color: #e55cff;
 }
 
 .stepItemActive.step4::after {
-  background-color: #FFA600;
+  background-color: #ffa600;
 }
 
 .stepItemActive.step5::after {
-  background-color: #14AA51;
+  background-color: #14aa51;
 }
 
 .stepsList .stepItemActive::after {
@@ -296,7 +292,220 @@
 }
 
 @keyframes flashAnimation {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.containerSvgMobile {
+  display: none;
+}
+
+
+@media screen and (max-width: 992px) {
+  .howItWorksContentWrapper {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .howItWorksContentWrapper .stepsList {
+    max-width: unset;
+    height: auto;
+  }
+  .howItWorksContentWrapper .stepsList .stepItemActive {
+    max-width: unset;
+    position: relative;
+  }
+
+  .stepItemActive.step1 {
+    border-bottom-color: #006bff !important;
+  }
+  .stepItemActive.step2 {
+    border-bottom-color: #8247f5 !important;
+  }
+  .stepItemActive.step3 {
+    border-bottom-color: #e55cff !important;
+  }
+  .stepItemActive.step4 {
+    border-bottom-color: #ffa600 !important;
+  }
+  .stepItemActive.step5 {
+    border-bottom-color: #14aa51 !important;
+  }
+
+  .stepsList .stepItemActive::after {
+    display: none !important;
+  }
+
+  .stepsList .stepDescriptionWrapper {
+  }
+  /* desktop */
+  .stepImageContainer {
+    display: none;
+  }
+
+  .containerSvgMobile {
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 36px;
+    border-top: 2px solid rgb(212, 224, 237);
+  }
+
+  .containerSvgMobile .wrapperSvgMobile {
+    height: auto;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(240, 243, 248);
+    border-radius: 24px;
+  }
+
+  .containerSvgMobile .wrapperSvgMobile svg {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .containerSvgMobile .wrapperSvgMobile .containerMobileImage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .containerSvgMobile .wrapperSvgMobile .containerMobileImage img {
+    color: transparent;
+    object-fit: contain;
+    width: 100%;
+    min-width: auto;
+    max-width: 650px;
+    height: auto;
+    min-height: auto;
+    max-height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stepImageContainer {
+    display: none;
+  }
+
+  .containerSvgMobile {
+    display: none;
+  }
+
+  .stepItemActive .containerSvgMobile {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    border-top: 2px solid rgb(212, 224, 237);
+  }
+
+  .stepItemActive .wrapperSvgMobile {
+    height: auto;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(240, 243, 248);
+    border-radius: 24px;
+  }
+
+  .stepItemActive .wrapperSvgMobile svg {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .stepItemActive .containerMobileImage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .stepItemActive .containerMobileImage img {
+    color: transparent;
+    object-fit: contain;
+    width: 100%;
+    min-width: auto;
+    max-width: 650px;
+    height: auto;
+    min-height: auto;
+    max-height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stepTitleActive {
+    font-size: 1.5rem;
+  }
+
+  .stepsList .stepDescription {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+  }
+  
+
+  /* Eliminar animación del step item */
+  .stepsList .stepItemActive {
+    border-bottom: 0;
+  }
+  
+  /* Mover barra de carga al step description */
+  .stepsList .stepDescription {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Barra de carga COMPLETA (100%) en móvil */
+  .stepItemActive .stepDescription::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%; /* Siempre al 100% */
+    animation: none; /* Eliminamos la animación */
+  }
+  
+  /* Colores específicos por paso */
+  .stepItemActive.step1 .stepDescription::after {
+    background-color: #006bff;
+  }
+  .stepItemActive.step2 .stepDescription::after {
+    background-color: #8247f5;
+  }
+  .stepItemActive.step3 .stepDescription::after {
+    background-color: #e55cff;
+  }
+  .stepItemActive.step4 .stepDescription::after {
+    background-color: #ffa600;
+  }
+  .stepItemActive.step5 .stepDescription::after {
+    background-color: #14aa51;
+  }
 }

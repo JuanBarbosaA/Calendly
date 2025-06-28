@@ -1,12 +1,11 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 72px 0;
 }
 
 .heroContent {
   display: flex;
-  padding: 0 40px;
+  padding: 72px 40px;
   margin: 0 auto;
   gap: 32px;
   position: relative;
@@ -175,74 +174,88 @@
 }
 
 .heroGraphic {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  position: relative;
-  height: 450px;
-  perspective: 1000px;
+      transform-style: preserve-3d;
+          display: flex
+;
+    position: relative;
+    z-index: 1;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.heroText{
-  max-width: 468px;
-}
-
-.slide {
+.heroGraphic .containerCard{
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  height: fit-content;
-  transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border: 1px solid rgba(228, 228, 228, 0.671);
-  border-radius: 24px;
-  box-shadow: 
-    rgba(71, 103, 136, 0.04) 0px 4px 5px 0px,
-    rgba(71, 103, 136, 0.03) 0px 8px 15px 0px,
-    rgba(71, 103, 136, 0.08) 0px 30px 50px 0px;
-  background: white;
-  transform: translateY(0px) scale(0.9);
-  opacity: 0.75;
-  overflow: hidden;
-  backface-visibility: hidden;
-  width: 100%;
-  max-width: 740px;
+    display: flex
+;
+    width: 100%;
+    position: absolute;
+    height: fit-content;
+    transition: 0.6s ease-in-out;
+    border: 1px solid rgb(212, 224, 237);
+    border-radius: 24px;
+    box-shadow: rgba(71, 103, 136, 0.04) 0px 4px 5px 0px, rgba(71, 103, 136, 0.03) 0px 8px 15px 0px, rgba(71, 103, 136, 0.08) 0px 30px 50px 0px;
+    background: rgb(255, 255, 255);
+    transform: translateY(0px) scale(0.9);
+    opacity: 0.75;
 }
 
-.slide.active {
+.heroGraphic .containerCard.active{
   position: relative;
-  opacity: 1;
-  z-index: 10;
-  transform: translateY(40px) translateZ(1px);
-  box-shadow: 
-    0 20px 25px -5px rgba(0, 0, 0, 0.1), 
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  background: white;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(40px) translateZ(1px);
 }
 
-.slide.active {
-  opacity: 1 !important;
+.heroGraphic .containerCard .card{
+      display: flex
+;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 24px;
 }
 
-.heroGraphic article img {
-  width: 100%;
-  border-radius: 0 0 24px 24px;
+
+.heroGraphic .containerCard .card .headerCard{
+  display: flex
+;
+    transition: padding 0.6s ease-in-out;
+    flex: 1 1 0%;
+    flex-direction: column;
+    padding: 24px 36px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px 24px 0px 0px;
 }
 
-.heroGraphic article .containerTitle {
-  padding: 24px 36px;
+
+.heroGraphic .containerCard .card .headerCard h4{
+      font-size: 1.75rem;
+    line-height: 1.4;
+    text-align: left;
+    color: rgb(11, 53, 88);
+    font-weight: 600;
+
 }
 
-.heroGraphic article h4 {
-  color: #0b3558;
-  line-height: 1.4;
-  font-size: 26px;
-  font-weight: 600;
+
+.heroGraphic .containerCard .card .headerCard p{
+  transition: 0.5s;
+    margin-top: 0px;
+    height: 0px;
+    overflow: hidden;
+        text-align: left;
+    color: rgb(71, 103, 136);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 400;
+
+}
+
+.card img{
+    color: transparent;
+        max-width: 100%;
+    height: auto;
+    border-radius: 0px 0px 24px 24px;
 }
 
 .emailSignupBox {
@@ -253,34 +266,63 @@
   font-weight: 500;
 }
 
-@media (max-width: 900px) {
-  .heroContent {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .heroText,
-  .heroGraphic {
-    max-width: 100%;
-  }
-  
-  .heroGraphic {
-    height: 420px;
-  }
-  
-  .backgroundSvg {
-    top: 50px;
-    transform: scale(0.8);
-  }
+@media screen and (max-width: 992px) {
+.hero{
+      
 }
 
-@media (max-width: 768px) {
-  .heroGraphic {
-    height: 380px;
-  }
-  
-  .backgroundSvg {
-    top: 100px;
-    transform: scale(0.6);
-  }
+.hero .backgroundSvg{
+  display: none;
 }
+
+.hero .heroContent{
+  padding: 56px 32px 32px 32px 32px;
+        display: flex
+;
+        flex-direction: column;
+        align-items: center;
+}
+
+.heroContent .heroText{
+          display: flex
+;
+        flex-direction: column;
+                max-width: unset;
+        gap: 0;
+                -webkit-box-align: center;
+        align-items: center;
+        max-width: 468px;
+}
+
+
+.heroContent .heroText .title{
+        text-align: center;
+                font-size: 3.125rem;
+}
+
+.heroContent .heroText .paragraph{
+        text-align: center;
+        max-width: 100%;
+}
+
+.heroButtons .buttons{
+          flex-wrap: wrap;
+        -webkit-box-pack: center;
+        justify-content: center;
+}
+
+.emailSignupBox{
+          -webkit-box-pack: center;
+        justify-content: center;
+}
+
+.heroGraphic{
+          gap: 24px;
+}
+
+.heroGraphic .containerCard .card .headerCard h4{
+          font-size: 1.4rem;
+}
+}
+

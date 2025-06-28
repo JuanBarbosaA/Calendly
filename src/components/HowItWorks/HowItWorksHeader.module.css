@@ -63,3 +63,15 @@
     background-color: rgb(0, 78, 186);
     border-color: rgb(0, 78, 186);
 }
+
+@media screen and (max-width: 992px) {
+    .containerTitle h2{
+        max-width: 692px;
+        font-size: 4.25rem;
+    }
+
+    .heading .containerContent{
+        max-width: 692px;
+    }
+
+}
